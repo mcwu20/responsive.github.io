@@ -1,0 +1,159 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+p, .top-news, .snippet__title {
+  font-size: 16px;
+}
+
+.hero article {
+  max-height: 60%;
+}
+
+.weather {
+  width: 100%;
+}
+
+.top-news, .scores {
+  width: 100%;
+}
+
+.snippet__thumbnail {
+  margin: 1em;
+}
+
+.snippet__title {
+  padding-top: 1em;
+}
+
+
+@media screen and (max-width: 599px) {
+  .header__logo {
+    height: 50px;
+    margin-right: 0.25em;
+  }
+
+  .header__title {
+    font-size: 2em;
+    margin: 1em 0.05em 0.5em 0.05em;
+  }
+
+  #nav-menu {
+    font-size: 30px;
+    color: lightgrey;
+    padding: 15px 15px 10px 5px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  #nav-menu:hover {
+    cursor: pointer;
+  }
+
+  .nav {
+    position: absolute;
+    background: white;
+    z-index: 10;
+    /* Move drawer off canvas */
+    -webkit-transform: translate(0, -600px);
+    transform: translate(0, -600px);
+    /* Animate the drawer */
+    transition: transform 0.3s ease;
+  }
+
+  .nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid lightgrey;
+    width: 100%;
+  }
+
+  .snippet__thumbnail {
+    display: none;
+  }
+
+  /* hide scores' location */
+  .scores__location {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .header__logo {
+    height: 72px;
+    margin-right: 1em;
+  }
+
+  .header__title {
+    font-size: 4em;
+    margin: 0.5em 0.25em;
+  }
+
+  #nav-menu {
+    display: none;
+  }
+
+  .hero {
+    width: 60%;
+    order: 0;
+  }
+
+  .weather {
+    width: 40%;
+    order: 1;
+  }
+
+  .top-news {
+    order: 2;
+  }
+
+  .scores {
+    order: 3;
+  }
+
+  .recent-news {
+    order: 4;
+  }
+
+  .snippet__thumbnail {
+    min-width: 100px;
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+   .header {
+     width: 100%;
+   }
+
+   .header__inner, .nav, main, footer {
+     max-width: 990px;
+     margin: auto;
+   }
+
+   .weather {
+     width: 40%;
+     order: 3;
+   }
+
+   .hero {
+     width: 50%;
+   }
+
+   .top-news {
+     width: 50%;
+     order: 1;
+   }
+
+   .scores {
+     width: 60%;
+     order: 2;
+   }
+ }
