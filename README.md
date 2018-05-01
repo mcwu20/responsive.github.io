@@ -1,2 +1,2 @@
 # responsive.github.io
-responsive website
+Udacity project: responsive website with breakpoints
